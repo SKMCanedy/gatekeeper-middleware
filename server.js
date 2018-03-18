@@ -71,7 +71,7 @@ function gateKeeper(req, res, next) {
   const userInfoObject = queryString.parse(userInfo);
   console.log (userInfoObject);
   
-  for (let i = 0; i<4; i++) {
+  for (let i = 0; i<USERS.length; i++) {
     if (USERS[i].userName == userInfoObject.user && USERS[i].password == userInfoObject.pass){
       req.user = USERS[i];
     };
